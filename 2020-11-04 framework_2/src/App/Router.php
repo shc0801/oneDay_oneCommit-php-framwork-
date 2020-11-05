@@ -26,8 +26,8 @@ class Router {
                 if($permission) {
                     if($permission == "guest" && user()) go("/", "로그인한 회원은 접근할 수 없습니다.");
                     if($permission == "user" && !user()) go("/login", "로그인 후 이용하실 수 있습니다.");
-                    if($permission == "company" && !company()) go("/login", "로그인 후 이용하실 수 있습니다.");
-                    if($permission == "admin" && !admin()) go("/login", "로그인 후 이용하실 수 있습니다.");
+                    if($permission == "company" && !company()) go("/login", "기업 화원만 접근할 수 있습니다.");
+                    if($permission == "admin" && !admin()) go("/login", "관리자만 접근할 수 있습니다.");
                 }
             }
         }
